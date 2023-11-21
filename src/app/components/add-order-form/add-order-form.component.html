@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-5">
+            <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+                <div>
+                    <label for="description" class="form-label">Description:</label>
+                    <input class="form-control" id="description" type="text" formControlName="description" placeholder="First Name" />
+                    <div *ngIf="orderForm.get('description')?.invalid && orderForm.get('description')?.touched" class="error-message">Please enter a description of the food item.</div>
+                </div>
+                <div>
+                    <label for="restaurant" class="form-label">Restaurant:</label>
+                    <input class="form-control" id="restaurant" type="text" formControlName="restaurant" placeholder="Last Name" />
+                    <div *ngIf="orderForm.get('restaurant')?.invalid && orderForm.get('restaurant')?.touched" class="error-message">Please enter the restaurant of the order.</div>
+                </div>
+                <div>
+                    <label class="form-label" for="rating">Rating:</label>
+                    <input class="form-control" id="rating" type="number" formControlName="rating" placeholder="Rating" [disabled]=true />
+                </div>
+                <div>
+                    <label class="form-label">
+                    <input class="form-check-input" type="checkbox" formControlName="orderAgain">Order again?</label>
+                    <button class="btn btn-primary" type="submit" [disabled]="!orderForm.valid">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
