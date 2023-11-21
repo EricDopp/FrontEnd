@@ -5,15 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { OrderHistoryComponent } from './components/order-history/order-history.component';
+import { FormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms'; 
+import { AddOrderFormComponent } from './components/add-order-form/add-order-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OrderHistoryComponent,
+    AddOrderFormComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

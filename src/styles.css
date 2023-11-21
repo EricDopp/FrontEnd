@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Helvetica", monospace;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #050801;
+  }
+  
+  p{
+    color: #fff;
+    text-align:center;
+    margin-top: 10px
+  }
+  
+  a {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: 0.5s;
+  }
+  
+  .btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    flex-direction: row;  
+  }
+  .green-btn{
+    color: chartreuse;
+    border: 1.5px solid chartreuse;
+    border-radius: 7px;  
+  }
+  .green-btn:hover{
+    background-color: chartreuse;
+    color: #050801;
+    box-shadow: 0px 0px 5px chartreuse, 0px 0px 25px chartreuse, 0px 0px 50px chartreuse, 0px 0px 100px chartreuse;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); 
+  }
+  

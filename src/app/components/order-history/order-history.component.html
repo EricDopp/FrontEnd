@@ -1,0 +1,30 @@
+
+<table>
+<thead>
+    <tr>
+    <th>ID</th>
+    <th>Description</th>
+    <th>Restaurant</th>
+    <th>Rating</th>
+    <th>Order Again</th>
+    <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let order of order">
+    <td>{{ order.id }}</td>
+    <td>{{ order.description }}</td>
+    <td>{{ order.restaurant }}</td>
+    <td>{{ order.rating }}</td>
+    <td>
+        <span *ngIf="order.orderAgain">&#10004;</span>
+    </td>
+    <td>
+        <button type= "submit">Delete!</button>
+        <p>Hover on Buttons</p>
+        <div class="button"></div>
+        <a class="green-btn" href="#">Neon Button</a>
+    </td>
+    </tr>
+</tbody>
+</table>
